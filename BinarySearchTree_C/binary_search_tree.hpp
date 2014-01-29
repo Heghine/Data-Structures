@@ -20,7 +20,8 @@ private:
 	};
 
 	node* root;
-
+	
+	void clear(node* &at);
 	void print(node* at);
 	void insertElement(int v, node* &at);
 	bool searchElement(int v, node* at);
@@ -28,6 +29,7 @@ private:
 
 public:
 	BinarySearchTree();
+	~BinarySearchTree();
 	bool isEmpty();
 	void print();
 	void insertElement(int value);

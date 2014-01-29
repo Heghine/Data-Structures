@@ -5,6 +5,21 @@ BinarySearchTree::BinarySearchTree()
 	root = NULL;
 };
 
+BinarySearchTree::~BinarySearchTree()
+{
+	clear(root);
+};
+
+void BinarySearchTree::clear(node* &at)
+{
+	if (at->left != NULL)
+		clear(at->left);
+	if (at->right != NULL)
+		clear(at->right);
+	delete at;
+	at = NULL;
+};
+
 bool BinarySearchTree::isEmpty()
 {
 	return root == NULL;
